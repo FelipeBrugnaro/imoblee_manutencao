@@ -47,13 +47,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
+            height: 100%;
         }
         .content {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            text-align: center;
         }
         .logo {
             margin-bottom: 30px;
