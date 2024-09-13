@@ -104,10 +104,17 @@
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXL7NJNK"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T0ME5NMSLE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T0ME5NMSLE');
+</script>
+
 <div class="container">
     <div class="content">
         <img title="Imoblee" src="{{ asset('assets/images/logo.svg') }}" width="230" class="logo" alt="Imoblee logo" role="img" aria-label="Imoblee logo">
