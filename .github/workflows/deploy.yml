@@ -13,9 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3  # Atualize para a versão mais recente
       - name: Deploy to server
-        uses: appleboy/ssh-action@0.1.5
+        uses: appleboy/ssh-action@0.1.8  # Atualize para a versão mais recente encontrada
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
