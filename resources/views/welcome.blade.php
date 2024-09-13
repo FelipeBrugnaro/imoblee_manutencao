@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,20 +11,20 @@
 
     <meta property="og:title" content="Imoblee: Arrendar, Comprar ou Partilhar imóveis em Portugal">
     <meta property="og:description" content="Encontre imóveis em Portugal com facilidade. Arrendar, comprar ou compartilhar nunca foi tão simples!">
-    <meta property="og:image" content="https://www.imoblee.com/assets/imoblee.jpg">
-    <meta property="og:url" content="https://www.imoblee.com">
+    <meta property="og:image" content="{{ asset('assets/images/imoblee.jpg') }}">
+    <meta property="og:url" content="{{ config('app.url') }}">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Imoblee">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Imoblee: Arrendar, Comprar ou Partilhar imóveis em Portugal">
     <meta name="twitter:description" content="Encontre imóveis em Portugal com facilidade. Arrendar, comprar ou compartilhar nunca foi tão simples!">
-    <meta name="twitter:image" content="https://www.imoblee.com/assets/imoblee.jpg">
+    <meta name="twitter:image" content="{{ asset('assets/images/imoblee.jpg') }}">
     <meta name="twitter:site" content="@imoblee">
 
-    <link rel="canonical" href="https://www.imoblee.com">
+    <link rel="canonical" href="{{ config('app.url') }}">
 
-    <link rel="icon" type="image/png" sizes="16x16"  href="https://www.imoblee.com/assets/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16"  href="{{ asset('assets/favicons/favicon-16x16.png') }}">
     <meta name="msapplication-TileColor" content="#f9f9f9">
     <meta name="theme-color" content="#f9f9f9">
 
@@ -91,40 +91,42 @@
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="content">
-            <img title="Imoblee" src="logo.svg" width="230" class="logo" alt="Imoblee logo" role="img" aria-label="Imoblee logo">
-            <h1 class="title" role="heading" aria-level="1">Arrendar, comprar ou partilhar em Portugal.</h1>
-            <h3 class="subtitle">Brevemente, o nosso portal estará disponível.</h3>
-            <span class="small">Enquanto isso, desfrute de um GIF de um gato a pilotar.</span>
-            <img src="https://www.imoblee.com/assets/car_driving.gif" class="gif" width="200" alt="Gato a Pilotar" role="img" aria-label="Gato a Pilotar">
-            <div class="social">
-                <a href="https://instagram.com/imobl.ee" title="Instagram" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://www.tiktok.com/@imoblee/" title="TikTok" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-tiktok"></i>
-                </a>
-            </div>
+
+<div class="container">
+    <div class="content">
+        <img title="Imoblee" src="{{ asset('assets/images/logo.svg') }}" width="230" class="logo" alt="Imoblee logo" role="img" aria-label="Imoblee logo">
+        <h1 class="title" role="heading" aria-level="1">Arrendar, comprar ou partilhar em Portugal.</h1>
+        <h3 class="subtitle">Brevemente, o nosso portal estará disponível.</h3>
+        <span class="small">Enquanto isso, desfrute de um GIF de um gato a pilotar.</span>
+        <img src="{{ asset('assets/images/car_driving.gif') }}" class="gif" width="200" alt="Gato a Pilotar" role="img" aria-label="Gato a Pilotar">
+        <div class="social">
+            <a href="https://instagram.com/imobl.ee" title="Instagram" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@imoblee/" title="TikTok" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
         </div>
     </div>
+</div>
 
-    <script src="https://kit.fontawesome.com/4988c53f2b.js" crossorigin="anonymous"></script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Imoblee",
-        "url": "https://www.imoblee.com",
-        "logo": "https://www.imoblee.com/imoblee.jpg",
-        "description": "",
-        "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "email": "suporte@imoblee.com"
-        }
+<script src="https://kit.fontawesome.com/4988c53f2b.js" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Imoblee",
+    "url": "https://www.imoblee.com",
+    "logo": "https://www.imoblee.com/imoblee.jpg",
+    "description": "",
+    "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "suporte@imoblee.com"
     }
-    </script>
+}
+</script>
 </body>
 </html>
