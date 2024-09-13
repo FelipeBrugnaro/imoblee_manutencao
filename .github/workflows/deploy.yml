@@ -13,12 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3  # Atualize para a versão mais recente
+        uses: actions/checkout@v3
       - name: Deploy to server
-        uses: appleboy/ssh-action@0.1.8  # Atualize para a versão mais recente encontrada
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.SSHKEY }}
           port: ${{ secrets.PORT }}
-          key: ${{ secrets.SSHKEY }}
           script: "cd /var/www/imoblee.com"
